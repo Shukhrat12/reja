@@ -1,0 +1,14 @@
+{
+  "name": "Reja",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "training": "nodemon training.js"
+  },
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
