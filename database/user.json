@@ -1,0 +1,9 @@
+{
+    "name": "Steve",
+    "age": 39,
+    "profession": "Software Engineer",
+    "address": "123 market st",
+    "state": "South Carolina",
+    "country": "USA",
+    "languages": ["English", "Spanish", "Russian"]
+}
