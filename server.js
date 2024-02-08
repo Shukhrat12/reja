@@ -18,10 +18,10 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //HTMLdan traditional request yuborsak, express serverimiz qabul qilib oladi
 
-// 2: Session codes
+// 2: Session codes 
 // 3: Views
 app.set("views", __dirname + "/views");
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); 
 
 // 4: Routers
 app.post("/create-item", function (req, res) {
