@@ -9,7 +9,7 @@
 // 3. If it matches increment the counter by one, else continue to loop
 // 4. Return the counter
 
-//Implementation:
+// Implementation method 1 - with for loop:
 // function findLetterOccurence(letter, word) {
 //     let count = 0;
 //     for(let i=0; i<word.length; i++) {
@@ -19,9 +19,19 @@
 //     }
 //     return count;
 // }
-
 // const count = findLetterOccurence("e", "engineer")
 // console.log(count)
+
+
+// Implementation method 2 - with map() method:
+// function countLetter(xarf, soz) {
+//     let count = 0;
+//     soz.split("").map((ele) => ele === xarf ? count++ : null)
+//     return count
+//   }
+//   const result = countLetter("e", "engineer")
+//   console.log(result)
+
 
 // ===================================================================================
 
