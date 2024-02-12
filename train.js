@@ -150,3 +150,62 @@
 
 // run()
 
+// Challenge task 1
+
+// const animal_list = ['ant', 'bat', 'bird', 'cat', 'cock', 'cow', 'dog', 'duck', 'deer', 'fox', 'frog', 'goat', 'hen', 'mole', 'tiger', 'lion', 'monkey', 'elephant', 'wolf'];
+
+// Task
+// Print the animals from the animal_list array that has matching letters in the given string as an input
+// 
+// Method 1 
+// Loop the given string, get each letter 
+// Find the animals that starts with that letter
+// Loop the each animal letters of that new list of animals
+// Check if each letter exists in the given string
+// If it exists, print that animal name
+
+// Method 2
+// loop and get the each element of animal_list array
+// check if each letter of the array element included in the given string
+// if it returns the same amount of the length of array element
+// then print it
+//
+// Implementation for method 2:
+
+// function findAnimals(txt) {
+//     let count;
+//     let letters
+//     for(let i=0; i<animal_list.length; i++) {
+//        letters = animal_list[i].split("")
+//        count = 0;
+//        for(let j=0; j<letters.length; j++) {
+//         if(txt.includes(letters[j])) {
+//             count++
+//         }
+//        }
+//        if(count == letters.length) {
+//         console.log(animal_list[i])
+//        }
+//     }
+// }
+
+// findAnimals('dgoat');
+
+// B-TASK: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// Logic
+// 1. Loop and get each string characters 
+// 2. replace all non-numeric characters with empty string
+// 3. print the length of the result variable
+
+// function countDigits(str) {
+//     let res
+//     for(let i=0; i<str.length; i++) {
+//         res = str.replace(/\D/g, "");
+//     }
+//     console.log(res.length)
+// }
+// const countOfDig = countDigits("ad2a54y79wet0sfgb9")
