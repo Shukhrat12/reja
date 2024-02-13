@@ -27,7 +27,8 @@ app.set("view engine", "ejs");
 
 // 4: Routers
 app.post("/create-item", function (req, res) {
-  // db code goes here
+  console.log(res.body)
+  res.end("success!")
 });
 
 app.get("/author", (req, res) => {
@@ -35,7 +36,16 @@ app.get("/author", (req, res) => {
 });
 
 app.get("/", function (req, res) {
-  res.render("reja");
+  db.collection("plans").find()
+  .toArray((err, result) => {
+    if(err) {
+      console.log(err)
+      res.end("you screwed up")
+    } else {
+      console.log(result)
+      res.render("reja");
+    }
+  })
 });
 
 module.exports = app;
