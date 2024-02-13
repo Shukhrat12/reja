@@ -2,7 +2,7 @@ const http = require("http");
 const mongodb = require("mongodb")
 
 let db;
-const connectionString = "mongodb://cluster0.rizdgwn.mongodb.net:27017/Reja?directConnection=true"
+const connectionString = "mongodb+srv://cluster0.rizdgwn.mongodb.net/Reja"
 mongodb.connect(connectionString, 
   {
     useNewUrlParser: true, 
@@ -19,5 +19,5 @@ mongodb.connect(connectionString,
       server.listen(PORT, function () {
         console.log(`The server is running on port: ${PORT}, http://localhost:3000`);
       });
-    }
+    };
   });
