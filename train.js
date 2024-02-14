@@ -201,11 +201,39 @@
 // 2. replace all non-numeric characters with empty string
 // 3. print the length of the result variable
 
-// function countDigits(str) {
-//     let res
-//     for(let i=0; i<str.length; i++) {
-//         res = str.replace(/\D/g, "");
-//     }
+// Logic
+// 2. regex - dan foydalangan usuli
+// function sonlar(str) {
+//     let regex = /[^0-9]/g;
+//     return str.replace(regex, "").length;
+//   }
+
+//Logic
+// 0-9 
+// check if numbers exist in the string
+// if exists, print it
+
+// Logic
+// Array ning filter methodi dan foydalangan usuli
+// 1. Hamma sonlarni array qilib olamiz
+// 2. Inputni har bir elementini bo'lib arrayga solamiz
+// 3. Inputni iteratsiya qilamiz
+// 4. Raqam arrayni ichida bormi yo'qmi tekshiramiz, bo'lsa indexini bo'lmasa -1ni qaytaramiz
+// 5. Ajratib olingan yangi arrayni nechtaligini chiqaramiz va yangi variablega solamiz
+// 6. Yangi variableni return qilamiz
+
+function sonlar(son) {
+    const sonlar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    const re = son.split("").filter((element) => sonlar.indexOf(element) !== -1).length;
+  
+    return re;
+  }
+
+ let result = sonlar("ad2a54y79wet0sfgb9")
+ console.log(result)
+
+//  function countDigits(str) {
+//     let res = str.replace(/\D/g, "")
 //     console.log(res.length)
 // }
-// const countOfDig = countDigits("ad2a54y79wet0sfgb9")
+//  const countOfDig = countDigits("ad2a54y79wet0sfgb9")

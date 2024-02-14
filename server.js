@@ -1,8 +1,7 @@
 const http = require("http");
 const mongodb = require("mongodb")
 
-let db;
-const connectionString = "mongodb+srv://cluster0.rizdgwn.mongodb.net/Reja?authSource=admin"
+const connectionString = "mongodb+srv://shukhrat:cdLIPROge5C4SMWH@cluster0.rizdgwn.mongodb.net/Reja?retryWrites=true&w=majority"
 mongodb.connect(connectionString, 
   {
     useNewUrlParser: true, 
