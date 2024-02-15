@@ -5,6 +5,7 @@ const app = express();
 
 //Mongodb object creation
 const db = require('./server').db();
+const mongodb = require('mongodb');
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -32,6 +33,13 @@ app.post("/create-item", function (req, res) {
     res.json(data.ops[0])
   })
 });
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+    res.json({state: "success"})
+  })
+})
 
 app.get("/", function (req, res) {
   db.collection("plans")
