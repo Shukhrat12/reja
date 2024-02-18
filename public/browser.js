@@ -77,6 +77,7 @@ document.getElementById("clean-all").addEventListener("click", function (e) {
       .then((response) => {
         document.location.reload();
         alert(response.data.state);
+        createField.focus();
       })
       .catch(() => {
         console.log("Iltimos qaytadan harakat qiling!", err);
