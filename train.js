@@ -1,18 +1,19 @@
-/*D-TASK: 
+/*E-TASK: 
 
-Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
-MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
 
 @MITASK
 */
 
-function checkContent(str1, str2) {
-  const sortedStr1 = str1.split('').sort().join('');
-  const sortedStr2 = str2.split('').sort().join('');
-  return sortedStr1 === sortedStr2;
+// Reverse a string. 
+function getReverse(str) {
+  let result = "";
+  for(let i=str.length-1; i>=0; i--) {
+    result = result + str[i]
+  }
+  return result;
 }
-if (checkContent("mitgroup", "gmtiprou")) {
-  console.log("Har ikkala string bir hil harflardan iborat");
-} else {
-  console.log("Har ikkala string bir hil harflardan iborat emas");
-}
+
+const result = getReverse("hello")
+console.log(result)
