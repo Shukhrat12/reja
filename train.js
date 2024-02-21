@@ -1,19 +1,30 @@
-/*E-TASK: 
+/*F-TASK: 
 
-Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
-MASALAN: getReverse("hello") return qilsin "olleh"
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+MASALAN: getReverse("hello") return true return qiladi
 
 @MITASK
 */
 
-// Reverse a string. 
-function getReverse(str) {
-  let result = "";
-  for(let i=str.length-1; i>=0; i--) {
-    result = result + str[i]
+function findDuplicates(str) {
+  let count = 0;
+  const result = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i+1; j < str.length; j++) {
+      if(str[i] === str[j]) {
+        count++
+        result.push(str[i])
+        console.log(result)
+      }
+    }
   }
-  return result;
+  if (count>0) {
+    return true
+  } else {
+    return false
+  }
+  
 }
 
-const result = getReverse("hello")
+const result = findDuplicates("helloo")
 console.log(result)
